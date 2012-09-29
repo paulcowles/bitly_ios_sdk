@@ -63,7 +63,7 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
 		
 		// default to HMAC-SHA1
 		if (aProvider == nil)
-			signatureProvider = [[OAHMAC_SHA1SignatureProvider alloc] init];
+			signatureProvider = [[BitlyLib_OAHMAC_SHA1SignatureProvider alloc] init];
 		else 
 			signatureProvider = [aProvider retain];
 		
@@ -102,7 +102,7 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
 		
 		// default to HMAC-SHA1
 		if (aProvider == nil)
-			signatureProvider = [[OAHMAC_SHA1SignatureProvider alloc] init];
+			signatureProvider = [[BitlyLib_OAHMAC_SHA1SignatureProvider alloc] init];
 		else 
 			signatureProvider = [aProvider retain];
 		

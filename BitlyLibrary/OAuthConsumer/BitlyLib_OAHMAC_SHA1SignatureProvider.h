@@ -28,5 +28,5 @@
 #import "OASignatureProviding.h"
 
 
-@interface OAHMAC_SHA1SignatureProvider : NSObject <OASignatureProviding>
+@interface BitlyLib_OAHMAC_SHA1SignatureProvider : NSObject <OASignatureProviding>
 @end

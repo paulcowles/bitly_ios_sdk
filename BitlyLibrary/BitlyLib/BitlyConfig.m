@@ -59,9 +59,9 @@ NSString * const BitlyTwitterAuthorizeURLFormat = @"https://api.twitter.com/oaut
 - (void)setTwitterOAuthConsumerKey:(NSString *)consumerKey 
         twitterOAuthConsumerSecret:(NSString *)consumerSecret 
     twitterOAuthSuccessCallbackURL:(NSString *)successCallbackURL {
-    twitterOAuthConsumerKey = consumerKey;
-    twitterOAuthConsumerSecret = consumerSecret;
-    twitterOAuthSuccessCallbackURL = successCallbackURL;
+    __twitterOAuthConsumerKey = consumerKey;
+    __twitterOAuthConsumerSecret = consumerSecret;
+    __twitterOAuthSuccessCallbackURL = successCallbackURL;
 }
 
 - (NSDictionary *)plistConfig {

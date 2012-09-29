@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1DE6E416140484003E51F9 /* BitlyLib_Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B1DE6E316140484003E51F9 /* BitlyLib_Base64Transcoder.c */; };
+		5BCED5CE161680DC0069275F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BCED5CC161680DC0069275F /* InfoPlist.strings */; };
+		5BCED5D3161680E50069275F /* BitlyTweetSheet_iPad.xib in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF1614747C6500EDB90F /* BitlyTweetSheet_iPad.xib */; };
+		5BCED5D4161680E50069275F /* BitlyTweetSheet_iPhone.xib in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF1714747C6500EDB90F /* BitlyTweetSheet_iPhone.xib */; };
+		5BCED5D8161682EC0069275F /* blue-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B19CCF1914747C6500EDB90F /* blue-button.png */; };
+		5BCED5D9161682EC0069275F /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = B19CCF1A14747C6500EDB90F /* gear.png */; };
 		B15CACA913F5A229006D7EE7 /* BitlyConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B15CACA713F59D99006D7EE7 /* BitlyConfig.m */; };
 		B176FA9613F2E1E700F900C2 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B149AC0F13B28FDA00E58291 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B176FA9713F2E1E700F900C2 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B149ABFD13B24D9200E58291 /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -18,14 +24,13 @@
 		B19CCF2414747C6500EDB90F /* BitlyTweetSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = B19CCF1F14747C6500EDB90F /* BitlyTweetSheet.h */; };
 		B19CCF2514747C6500EDB90F /* BitlyURLShortener.h in Headers */ = {isa = PBXBuildFile; fileRef = B19CCF2014747C6500EDB90F /* BitlyURLShortener.h */; };
 		B1A11BAE13F1B86A00F8A7E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B149ABDA13B24BC700E58291 /* Foundation.framework */; };
-		B1A11BBE13F1B8A700F8A7E5 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = B149032613E9CEFE009DE846 /* Base64Transcoder.c */; };
 		B1A11BBF13F1B8A700F8A7E5 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = B149032C13E9CEFE009DE846 /* NSMutableURLRequest+Parameters.m */; };
 		B1A11BC013F1B8A700F8A7E5 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B149033013E9CEFE009DE846 /* NSString+URLEncoding.m */; };
 		B1A11BC113F1B8A700F8A7E5 /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = B149033413E9CEFE009DE846 /* NSURL+Base.m */; };
 		B1A11BC213F1B8A700F8A7E5 /* OAAsynchronousDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B149033813E9CEFE009DE846 /* OAAsynchronousDataFetcher.m */; };
 		B1A11BC313F1B8A700F8A7E5 /* OAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = B149033A13E9CEFE009DE846 /* OAConsumer.m */; };
 		B1A11BC413F1B8A700F8A7E5 /* OADataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B149033E13E9CEFE009DE846 /* OADataFetcher.m */; };
-		B1A11BC513F1B8A700F8A7E5 /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B149034213E9CEFE009DE846 /* OAHMAC_SHA1SignatureProvider.m */; };
+		B1A11BC513F1B8A700F8A7E5 /* BitlyLib_OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B149034213E9CEFE009DE846 /* BitlyLib_OAHMAC_SHA1SignatureProvider.m */; };
 		B1A11BC613F1B8A700F8A7E5 /* OAMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B149034613E9CEFE009DE846 /* OAMutableURLRequest.m */; };
 		B1A11BC713F1B8A700F8A7E5 /* OAPlaintextSignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B149034A13E9CEFE009DE846 /* OAPlaintextSignatureProvider.m */; };
 		B1A11BC813F1B8A700F8A7E5 /* OARequestParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = B149034E13E9CEFE009DE846 /* OARequestParameter.m */; };
@@ -64,11 +69,26 @@
 		B1DFCC121471B34A003FAED2 /* JSONRepresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBFD1471B34A003FAED2 /* JSONRepresentation.h */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5BCED5D6161681660069275F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B149ABCB13B24BC700E58291 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BCED5C5161680DC0069275F;
+			remoteInfo = BitlyXIB;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		5B1DE6E316140484003E51F9 /* BitlyLib_Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BitlyLib_Base64Transcoder.c; sourceTree = "<group>"; };
+		5BCED5C6161680DC0069275F /* BitlyXIB.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitlyXIB.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BCED5C7161680DC0069275F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		5BCED5CB161680DC0069275F /* BitlyXIB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BitlyXIB-Info.plist"; sourceTree = "<group>"; };
+		5BCED5CD161680DC0069275F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5BCED5CF161680DC0069275F /* BitlyXIB-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BitlyXIB-Prefix.pch"; sourceTree = "<group>"; };
 		B10DAC0213C38DDC00B9A155 /* BitlyTweetSheetAccountSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitlyTweetSheetAccountSelector.h; sourceTree = "<group>"; };
 		B10DAC0313C38DDC00B9A155 /* BitlyTweetSheetAccountSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitlyTweetSheetAccountSelector.m; sourceTree = "<group>"; };
-		B149032613E9CEFE009DE846 /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
-		B149032713E9CEFE009DE846 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
+		B149032713E9CEFE009DE846 /* BitlyLib_Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitlyLib_Base64Transcoder.h; sourceTree = "<group>"; };
 		B149032B13E9CEFE009DE846 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
 		B149032C13E9CEFE009DE846 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
 		B149032F13E9CEFE009DE846 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
@@ -81,8 +101,8 @@
 		B149033A13E9CEFE009DE846 /* OAConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAConsumer.m; sourceTree = "<group>"; };
 		B149033D13E9CEFE009DE846 /* OADataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OADataFetcher.h; sourceTree = "<group>"; };
 		B149033E13E9CEFE009DE846 /* OADataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OADataFetcher.m; sourceTree = "<group>"; };
-		B149034113E9CEFE009DE846 /* OAHMAC_SHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAHMAC_SHA1SignatureProvider.h; sourceTree = "<group>"; };
-		B149034213E9CEFE009DE846 /* OAHMAC_SHA1SignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAHMAC_SHA1SignatureProvider.m; sourceTree = "<group>"; };
+		B149034113E9CEFE009DE846 /* BitlyLib_OAHMAC_SHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitlyLib_OAHMAC_SHA1SignatureProvider.h; sourceTree = "<group>"; };
+		B149034213E9CEFE009DE846 /* BitlyLib_OAHMAC_SHA1SignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitlyLib_OAHMAC_SHA1SignatureProvider.m; sourceTree = "<group>"; };
 		B149034513E9CEFE009DE846 /* OAMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAMutableURLRequest.h; sourceTree = "<group>"; };
 		B149034613E9CEFE009DE846 /* OAMutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAMutableURLRequest.m; sourceTree = "<group>"; };
 		B149034913E9CEFE009DE846 /* OAPlaintextSignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAPlaintextSignatureProvider.h; sourceTree = "<group>"; };
@@ -153,6 +173,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5BCED5C3161680DC0069275F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1A11BAA13F1B86A00F8A7E5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,6 +194,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BCED5C9161680DC0069275F /* BitlyXIB */ = {
+			isa = PBXGroup;
+			children = (
+				5BCED5CA161680DC0069275F /* Supporting Files */,
+			);
+			path = BitlyXIB;
+			sourceTree = "<group>";
+		};
+		5BCED5CA161680DC0069275F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BCED5CB161680DC0069275F /* BitlyXIB-Info.plist */,
+				5BCED5CC161680DC0069275F /* InfoPlist.strings */,
+				5BCED5CF161680DC0069275F /* BitlyXIB-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		B149032413E9CEFE009DE846 /* OAuthConsumer */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,8 +228,8 @@
 				B149033A13E9CEFE009DE846 /* OAConsumer.m */,
 				B149033D13E9CEFE009DE846 /* OADataFetcher.h */,
 				B149033E13E9CEFE009DE846 /* OADataFetcher.m */,
-				B149034113E9CEFE009DE846 /* OAHMAC_SHA1SignatureProvider.h */,
-				B149034213E9CEFE009DE846 /* OAHMAC_SHA1SignatureProvider.m */,
+				B149034113E9CEFE009DE846 /* BitlyLib_OAHMAC_SHA1SignatureProvider.h */,
+				B149034213E9CEFE009DE846 /* BitlyLib_OAHMAC_SHA1SignatureProvider.m */,
 				B149034513E9CEFE009DE846 /* OAMutableURLRequest.h */,
 				B149034613E9CEFE009DE846 /* OAMutableURLRequest.m */,
 				B149034913E9CEFE009DE846 /* OAPlaintextSignatureProvider.h */,
@@ -204,8 +249,8 @@
 		B149032513E9CEFE009DE846 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
-				B149032613E9CEFE009DE846 /* Base64Transcoder.c */,
-				B149032713E9CEFE009DE846 /* Base64Transcoder.h */,
+				5B1DE6E316140484003E51F9 /* BitlyLib_Base64Transcoder.c */,
+				B149032713E9CEFE009DE846 /* BitlyLib_Base64Transcoder.h */,
 			);
 			path = Crypto;
 			sourceTree = "<group>";
@@ -216,6 +261,7 @@
 				B1DFCBE51471B34A003FAED2 /* TouchJSON */,
 				B149032413E9CEFE009DE846 /* OAuthConsumer */,
 				B149ABDE13B24BC700E58291 /* BitlyLib */,
+				5BCED5C9161680DC0069275F /* BitlyXIB */,
 				B149ABD713B24BC700E58291 /* Frameworks */,
 				B149ABD513B24BC700E58291 /* Products */,
 			);
@@ -225,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				B1A11BAD13F1B86A00F8A7E5 /* libBitly.a */,
+				5BCED5C6161680DC0069275F /* BitlyXIB.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,6 +286,7 @@
 				B149ABD813B24BC700E58291 /* UIKit.framework */,
 				B149ABDA13B24BC700E58291 /* Foundation.framework */,
 				B149ABDC13B24BC700E58291 /* CoreGraphics.framework */,
+				5BCED5C7161680DC0069275F /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -402,6 +450,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5BCED5C5161680DC0069275F /* BitlyXIB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BCED5D0161680DC0069275F /* Build configuration list for PBXNativeTarget "BitlyXIB" */;
+			buildPhases = (
+				5BCED5C2161680DC0069275F /* Sources */,
+				5BCED5C3161680DC0069275F /* Frameworks */,
+				5BCED5C4161680DC0069275F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BitlyXIB;
+			productName = BitlyXIB;
+			productReference = 5BCED5C6161680DC0069275F /* BitlyXIB.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		B1A11BAC13F1B86A00F8A7E5 /* Bitly */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1A11BB513F1B86A00F8A7E5 /* Build configuration list for PBXNativeTarget "Bitly" */;
@@ -414,6 +479,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5BCED5D7161681660069275F /* PBXTargetDependency */,
 			);
 			name = Bitly;
 			productName = bitly;
@@ -443,9 +509,23 @@
 			projectRoot = "";
 			targets = (
 				B1A11BAC13F1B86A00F8A7E5 /* Bitly */,
+				5BCED5C5161680DC0069275F /* BitlyXIB */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BCED5C4161680DC0069275F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BCED5CE161680DC0069275F /* InfoPlist.strings in Resources */,
+				5BCED5D8161682EC0069275F /* blue-button.png in Resources */,
+				5BCED5D9161682EC0069275F /* gear.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		B15CAC9513F462BB006D7EE7 /* ShellScript */ = {
@@ -464,18 +544,26 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5BCED5C2161680DC0069275F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BCED5D3161680E50069275F /* BitlyTweetSheet_iPad.xib in Sources */,
+				5BCED5D4161680E50069275F /* BitlyTweetSheet_iPhone.xib in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1A11BA913F1B86A00F8A7E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1A11BBE13F1B8A700F8A7E5 /* Base64Transcoder.c in Sources */,
 				B1A11BBF13F1B8A700F8A7E5 /* NSMutableURLRequest+Parameters.m in Sources */,
 				B1A11BC013F1B8A700F8A7E5 /* NSString+URLEncoding.m in Sources */,
 				B1A11BC113F1B8A700F8A7E5 /* NSURL+Base.m in Sources */,
 				B1A11BC213F1B8A700F8A7E5 /* OAAsynchronousDataFetcher.m in Sources */,
 				B1A11BC313F1B8A700F8A7E5 /* OAConsumer.m in Sources */,
 				B1A11BC413F1B8A700F8A7E5 /* OADataFetcher.m in Sources */,
-				B1A11BC513F1B8A700F8A7E5 /* OAHMAC_SHA1SignatureProvider.m in Sources */,
+				B1A11BC513F1B8A700F8A7E5 /* BitlyLib_OAHMAC_SHA1SignatureProvider.m in Sources */,
 				B1A11BC613F1B8A700F8A7E5 /* OAMutableURLRequest.m in Sources */,
 				B1A11BC713F1B8A700F8A7E5 /* OAPlaintextSignatureProvider.m in Sources */,
 				B1A11BC813F1B8A700F8A7E5 /* OARequestParameter.m in Sources */,
@@ -502,12 +590,78 @@
 				B1DFCC0D1471B34A003FAED2 /* CJSONDeserializer.m in Sources */,
 				B1DFCC0F1471B34A003FAED2 /* CJSONScanner.m in Sources */,
 				B1DFCC111471B34A003FAED2 /* CJSONSerializer.m in Sources */,
+				5B1DE6E416140484003E51F9 /* BitlyLib_Base64Transcoder.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5BCED5D7161681660069275F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BCED5C5161680DC0069275F /* BitlyXIB */;
+			targetProxy = 5BCED5D6161681660069275F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5BCED5CC161680DC0069275F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BCED5CD161680DC0069275F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		5BCED5D1161680DC0069275F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BitlyXIB/BitlyXIB-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "BitlyXIB/BitlyXIB-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		5BCED5D2161680DC0069275F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BitlyXIB/BitlyXIB-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "BitlyXIB/BitlyXIB-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACH_O_TYPE = mh_bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		B149ABF413B24BC700E58291 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -597,6 +751,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5BCED5D0161680DC0069275F /* Build configuration list for PBXNativeTarget "BitlyXIB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BCED5D1161680DC0069275F /* Debug */,
+				5BCED5D2161680DC0069275F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		B149ABCE13B24BC700E58291 /* Build configuration list for PBXProject "BitlyLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

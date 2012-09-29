@@ -27,7 +27,7 @@
 #import <Foundation/Foundation.h>
 #import "OAConsumer.h"
 #import "OAToken.h"
-#import "OAHMAC_SHA1SignatureProvider.h"
+#import "BitlyLib_OAHMAC_SHA1SignatureProvider.h"
 #import "OASignatureProviding.h"
 #import "NSMutableURLRequest+Parameters.h"
 #import "NSURL+Base.h"

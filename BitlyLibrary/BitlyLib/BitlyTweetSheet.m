@@ -80,6 +80,25 @@
     [super dealloc];
 }
 
++ (NSBundle *)BundleWithName:(NSString *)bundleName {
+    static NSMutableDictionary *bundleDictionary = nil;
+    if ( bundleDictionary == nil ) {
+        bundleDictionary = [[NSMutableDictionary alloc] init];
+    }
+    NSBundle *bundle = [bundleDictionary objectForKey:bundleName];
+    if ( !bundle ) {
+        NSString* path = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:bundleName] stringByAppendingPathExtension:@"bundle"];
+        bundle = [NSBundle bundleWithPath:path];
+        assert( bundle );
+        if (bundle) {
+            [bundleDictionary setObject:bundle forKey:bundleName];
+        } else {
+            NSLog(@"could not locate bundle %@ in application bundle", bundleName);
+        }
+    }
+    return bundle;
+}
+
 #pragma mark initializer
 
 - (id)init {
@@ -89,8 +108,8 @@
     } else {
         nibName = @"BitlyTweetSheet_iPhone";
     }
-    
-    return [super initWithNibName:nibName bundle:nil];
+    NSBundle *bundle = [BitlyTweetSheet BundleWithName:@"BitlyXIB"];
+    return [super initWithNibName:nibName bundle:bundle];
 }
 
 
@@ -167,11 +186,11 @@
 }
 
 - (void)setAccounts {
-    if ([ACAccountStore class]) {
-        [self getAccountStoreAccounts];
-    } else {
+//    if ([ACAccountStore class]) {
+//        [self getAccountStoreAccounts];
+//    } else {
         [self getOAuthAccount];
-    }
+//    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -248,33 +267,33 @@
 - (void)sendTweet {
   
     if (self.textView.text.length) {
-        if ([TWRequest class]) {
-            
-            NSURL *url = [NSURL URLWithString:@"http://api.twitter.com/1/statuses/update.json"];
-            TWRequest *request = [[TWRequest alloc] initWithURL:url 
-                                                     parameters:[NSDictionary dictionaryWithObject:textView.text forKey:@"status"] 
-                                                  requestMethod:TWRequestMethodPOST];
-            self.twitterRequest = request;
-            [request release];
-            
-            twitterRequest.account = account;
-            [twitterRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-                if (error) {
-                    if ([delegate respondsToSelector:@selector(bitlyTweetSheet:didFailWithError:)]) {
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            [delegate bitlyTweetSheet:self didFailWithError:error]; 
-                        });
-                    }
-                } else {
-                    if ([delegate respondsToSelector:@selector(bitlyTweetSheetDidSendTweet:)]) {
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            [delegate bitlyTweetSheetDidSendTweet:self];
-                        });
-                    }
-                }
-            }];
-        } else { //version < iOS5
-            [[BitlyTwitterOAuthManager sharedTwitterOAuthManager] 
+//        if ([TWRequest class]) {
+//            
+//            NSURL *url = [NSURL URLWithString:@"http://api.twitter.com/1/statuses/update.json"];
+//            TWRequest *request = [[TWRequest alloc] initWithURL:url 
+//                                                     parameters:[NSDictionary dictionaryWithObject:textView.text forKey:@"status"] 
+//                                                  requestMethod:TWRequestMethodPOST];
+//            self.twitterRequest = request;
+//            [request release];
+//            
+//            twitterRequest.account = account;
+//            [twitterRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+//                if (error) {
+//                    if ([delegate respondsToSelector:@selector(bitlyTweetSheet:didFailWithError:)]) {
+//                        dispatch_async(dispatch_get_main_queue(), ^{
+//                            [delegate bitlyTweetSheet:self didFailWithError:error]; 
+//                        });
+//                    }
+//                } else {
+//                    if ([delegate respondsToSelector:@selector(bitlyTweetSheetDidSendTweet:)]) {
+//                        dispatch_async(dispatch_get_main_queue(), ^{
+//                            [delegate bitlyTweetSheetDidSendTweet:self];
+//                        });
+//                    }
+//                }
+//            }];
+//        } else { //version < iOS5
+            [[BitlyTwitterOAuthManager sharedTwitterOAuthManager]
              sendTweet:textView.text 
              withAccount:self.oauthAccount                
              completionHandler:^(BOOL success, NSError *error) {
@@ -292,7 +311,7 @@
                      }
                  }
              }];
-        }
+//        }
     }
 }
 
