@@ -20,6 +20,7 @@
 
 + (BitlyTwitterOAuthAccount *)accountWithTwitterResponse:(NSString *)twitterResponse;
 + (BitlyTwitterOAuthAccount *)savedAccount;
++ (void)removeSavedAccounts;
 
 - (OAToken *)oauthConsumerToken; 
 - (void)saveToKeychain;

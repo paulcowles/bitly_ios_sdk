@@ -70,9 +70,9 @@ NSString * const UserDefaultsKey = @"BitlyTwitterOAuthAccount";
                                    nil];
     
     OSStatus status = noErr;
-    
+        
+    // Add new keychain item.
     status = SecItemAdd((CFDictionaryRef)keychainQuery, NULL);
-    
     if (status != noErr) {
         BitlyLog(@"Error storing oauth data to keychain: status code %d", status); 
     } else {
@@ -117,5 +117,25 @@ NSString * const UserDefaultsKey = @"BitlyTwitterOAuthAccount";
     }
     return [account autorelease];
 }
+
++ (void)removeSavedAccounts {
+    NSDictionary *keychainQuery = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                   kSecClassInternetPassword, kSecClass,
+                                   @"twitter.com", kSecAttrServer,
+                                   (id)kCFBooleanTrue, (id)kSecReturnAttributes,
+                                   (id)kCFBooleanTrue, (id)kSecReturnData,
+                                   nil];
+    
+    OSStatus status = noErr;
+        
+    status = SecItemDelete((CFDictionaryRef)keychainQuery);
+    
+    if (status != noErr) {
+        BitlyLog(@"Error removing oauth data to keychain: status code %d", status);
+    } else {
+        BitlyLog(@"Oauth info removed from keychain");
+    }
+}
+
 
 @end
