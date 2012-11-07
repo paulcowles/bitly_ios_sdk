@@ -1,5 +1,5 @@
 //
-//  OAConsumer.h
+//  OAMutableURLRequest.h
 //  OAuthConsumer
 //
 //  Created by Jon Crosby on 10/19/07.
@@ -25,16 +25,44 @@
 
 
 #import <Foundation/Foundation.h>
+#import "SCAVENGEROAConsumer.h"
+#import "SCAVENGEROAToken.h"
+#import "BitlyLib_OAHMAC_SHA1SignatureProvider.h"
+#import "OASignatureProviding.h"
+#import "NSMutableURLRequest+Parameters.h"
+#import "NSURL+Base.h"
 
 
-@interface OAConsumer : NSObject {
+@interface SCAVENGEROAMutableURLRequest : NSMutableURLRequest {
 @protected
-	NSString *key;
-	NSString *secret;
+    SCAVENGEROAConsumer *consumer;
+    SCAVENGEROAToken *token;
+    NSString *realm;
+    NSString *signature;
+    id<OASignatureProviding> signatureProvider;
+    NSString *nonce;
+    NSString *timestamp;
+	NSMutableDictionary *extraOAuthParameters;
 }
-@property(retain) NSString *key;
-@property(retain) NSString *secret;
+@property(readonly) NSString *signature;
+@property(readonly) NSString *nonce;
 
-- (id)initWithKey:(NSString *)aKey secret:(NSString *)aSecret;
+- (id)initWithURL:(NSURL *)aUrl
+		 consumer:(SCAVENGEROAConsumer *)aConsumer
+			token:(SCAVENGEROAToken *)aToken
+            realm:(NSString *)aRealm
+signatureProvider:(id<OASignatureProviding, NSObject>)aProvider;
+
+- (id)initWithURL:(NSURL *)aUrl
+		 consumer:(SCAVENGEROAConsumer *)aConsumer
+			token:(SCAVENGEROAToken *)aToken
+            realm:(NSString *)aRealm
+signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
+            nonce:(NSString *)aNonce
+        timestamp:(NSString *)aTimestamp;
+
+- (void)prepare;
+
+- (void)setOAuthParameterName:(NSString*)parameterName withValue:(NSString*)parameterValue;
 
 @end

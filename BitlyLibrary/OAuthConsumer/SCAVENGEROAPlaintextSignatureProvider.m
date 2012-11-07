@@ -1,5 +1,5 @@
 //
-//  OAPlaintextSignatureProvider.h
+//  OAPlaintextSignatureProvider.m
 //  OAuthConsumer
 //
 //  Created by Jon Crosby on 10/19/07.
@@ -24,8 +24,20 @@
 //  THE SOFTWARE.
 
 
-#import <Foundation/Foundation.h>
-#import "OASignatureProviding.h"
+#import "SCAVENGEROAPlaintextSignatureProvider.h"
+#import "NSString+URLEncoding.h"
 
-@interface OAPlaintextSignatureProvider : NSObject <OASignatureProviding>
+
+@implementation SCAVENGEROAPlaintextSignatureProvider
+
+- (NSString *)name 
+{
+    return @"PLAINTEXT";
+}
+
+- (NSString *)signClearText:(NSString *)text withSecret:(NSString *)secret 
+{
+    return secret;
+}
+
 @end

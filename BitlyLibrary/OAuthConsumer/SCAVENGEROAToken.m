@@ -24,10 +24,10 @@
 //  THE SOFTWARE.
 
 
-#import "OAToken.h"
+#import "SCAVENGEROAToken.h"
 
 
-@implementation OAToken
+@implementation SCAVENGEROAToken
 
 @synthesize key, secret;
 

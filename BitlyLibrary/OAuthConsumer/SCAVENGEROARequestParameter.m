@@ -1,5 +1,5 @@
 //
-//  OAMutableURLRequest.h
+//  OARequestParameter.m
 //  OAuthConsumer
 //
 //  Created by Jon Crosby on 10/19/07.
@@ -24,45 +24,48 @@
 //  THE SOFTWARE.
 
 
-#import <Foundation/Foundation.h>
-#import "OAConsumer.h"
-#import "OAToken.h"
-#import "BitlyLib_OAHMAC_SHA1SignatureProvider.h"
-#import "OASignatureProviding.h"
-#import "NSMutableURLRequest+Parameters.h"
-#import "NSURL+Base.h"
+#import "SCAVENGEROARequestParameter.h"
 
 
-@interface OAMutableURLRequest : NSMutableURLRequest {
-@protected
-    OAConsumer *consumer;
-    OAToken *token;
-    NSString *realm;
-    NSString *signature;
-    id<OASignatureProviding> signatureProvider;
-    NSString *nonce;
-    NSString *timestamp;
-	NSMutableDictionary *extraOAuthParameters;
+@implementation SCAVENGEROARequestParameter
+@synthesize name, value;
+
++ (id)requestParameterWithName:(NSString *)aName value:(NSString *)aValue 
+{
+	return [[[SCAVENGEROARequestParameter alloc] initWithName:aName value:aValue] autorelease];
 }
-@property(readonly) NSString *signature;
-@property(readonly) NSString *nonce;
 
-- (id)initWithURL:(NSURL *)aUrl
-		 consumer:(OAConsumer *)aConsumer
-			token:(OAToken *)aToken
-            realm:(NSString *)aRealm
-signatureProvider:(id<OASignatureProviding, NSObject>)aProvider;
+- (id)initWithName:(NSString *)aName value:(NSString *)aValue 
+{
+    self = [super init];
+    if (self)
+	{
+		self.name = aName;
+		self.value = aValue;
+	}
+    return self;
+}
 
-- (id)initWithURL:(NSURL *)aUrl
-		 consumer:(OAConsumer *)aConsumer
-			token:(OAToken *)aToken
-            realm:(NSString *)aRealm
-signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
-            nonce:(NSString *)aNonce
-        timestamp:(NSString *)aTimestamp;
+- (void)dealloc
+{
+	[name release];
+	[value release];
+	[super dealloc];
+}
 
-- (void)prepare;
+- (NSString *)URLEncodedName 
+{
+	return [self.name URLEncodedString];
+}
 
-- (void)setOAuthParameterName:(NSString*)parameterName withValue:(NSString*)parameterValue;
+- (NSString *)URLEncodedValue 
+{
+    return [self.value URLEncodedString];
+}
+
+- (NSString *)URLEncodedNameValuePair 
+{
+    return [NSString stringWithFormat:@"%@=%@", [self URLEncodedName], [self URLEncodedValue]];
+}
 
 @end

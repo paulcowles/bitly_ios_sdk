@@ -1,8 +1,8 @@
 //
-//  OAConsumer.m
+//  OAServiceTicket.h
 //  OAuthConsumer
 //
-//  Created by Jon Crosby on 10/19/07.
+//  Created by Jon Crosby on 11/5/07.
 //  Copyright 2007 Kaboomerang LLC. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,30 +23,21 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import "OAConsumer.h"
+
+#import <Foundation/Foundation.h>
+#import "SCAVENGEROAMutableURLRequest.h"
 
 
-@implementation OAConsumer
-@synthesize key, secret;
-
-#pragma mark init
-
-- (id)initWithKey:(NSString *)aKey secret:(NSString *)aSecret 
-{
-    self = [super init];
-	if (self)
-	{
-		self.key = aKey;
-		self.secret = aSecret;
-	}
-	return self;
+@interface SCAVENGEROAServiceTicket : NSObject {
+@private
+    SCAVENGEROAMutableURLRequest *request;
+    NSURLResponse *response;
+    BOOL didSucceed;
 }
+@property(retain) SCAVENGEROAMutableURLRequest *request;
+@property(retain) NSURLResponse *response;
+@property(assign) BOOL didSucceed;
 
-- (void)dealloc
-{
-	[key release];
-	[secret release];
-	[super dealloc];
-}
+- (id)initWithRequest:(SCAVENGEROAMutableURLRequest *)aRequest response:(NSURLResponse *)aResponse didSucceed:(BOOL)success;
 
 @end

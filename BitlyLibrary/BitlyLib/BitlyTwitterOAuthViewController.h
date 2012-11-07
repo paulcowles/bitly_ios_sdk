@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OAToken.h"
+#import "SCAVENGEROAToken.h"
 #import "BitlyTwitterOAuthAccount.h"
 
 @class BitlyTwitterOAuthViewController;
@@ -27,7 +27,7 @@
 @property (nonatomic, retain) UIWebView *webView;
 @property (nonatomic, retain) UIActivityIndicatorView *activityIndicator;
 
-@property (nonatomic, retain) OAToken *requestToken;
+@property (nonatomic, retain) SCAVENGEROAToken *requestToken;
 
 @property (nonatomic, assign) id<BitlyTwitterOAuthDelegate> delegate;
 

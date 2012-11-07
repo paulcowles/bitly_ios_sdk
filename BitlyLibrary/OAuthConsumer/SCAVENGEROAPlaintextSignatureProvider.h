@@ -1,8 +1,8 @@
 //
-//  OAServiceTicket.m
+//  OAPlaintextSignatureProvider.h
 //  OAuthConsumer
 //
-//  Created by Jon Crosby on 11/5/07.
+//  Created by Jon Crosby on 10/19/07.
 //  Copyright 2007 Kaboomerang LLC. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,29 +24,8 @@
 //  THE SOFTWARE.
 
 
-#import "OAServiceTicket.h"
+#import <Foundation/Foundation.h>
+#import "OASignatureProviding.h"
 
-
-@implementation OAServiceTicket
-@synthesize request, response, didSucceed;
-
-- (id)initWithRequest:(OAMutableURLRequest *)aRequest response:(NSURLResponse *)aResponse didSucceed:(BOOL)success 
-{
-    self = [super init];
-    if (self)
-	{
-		self.request = aRequest;
-		self.response = aResponse;
-		self.didSucceed = success;
-	}
-    return self;
-}
-
-- (void)dealloc
-{
-	[request release];
-	[response release];
-	[super dealloc];
-}
-
+@interface SCAVENGEROAPlaintextSignatureProvider : NSObject <OASignatureProviding>
 @end

@@ -9,7 +9,7 @@
 #import "BitlyTwitterOAuthManager.h"
 #import "BitlyLibUtil.h"
 #import "OAuthConsumer.h"
-#import "OAMutableURLRequest.h"
+#import "SCAVENGEROAMutableURLRequest.h"
 #import "BitlyDebug.h"
 #import "BitlyConfig.h"
 
@@ -19,11 +19,11 @@
     BitlyTweetCompletionHandler tweetCompletionHandler;
 }
 
-@property (nonatomic, retain) OAToken *requestToken;
+@property (nonatomic, retain) SCAVENGEROAToken *requestToken;
 @property (nonatomic, retain) BitlyOAuthCompletionHandler requestTokenCompletionHandler;
 @property (nonatomic, retain) BitlyTweetCompletionHandler tweetCompletionHandler;
 
-- (void)getAccessTokenWithRequestToken:(OAToken *)token verifier:(NSString *)verifier;
+- (void)getAccessTokenWithRequestToken:(SCAVENGEROAToken *)token verifier:(NSString *)verifier;
 
 @end
 
@@ -120,12 +120,12 @@ static NSInteger OAuthCredentialsErrorCode = -215;
       
     } else {
     
-        OAConsumer *consumer = [[OAConsumer alloc] initWithKey:twitterOAuthConsumerKey
+        SCAVENGEROAConsumer *consumer = [[SCAVENGEROAConsumer alloc] initWithKey:twitterOAuthConsumerKey
                                                         secret:twitterOAuthConsumerSecret];
         
         NSURL *url = [NSURL URLWithString:BitlyTwitterRequestTokenURL];
         
-        OAMutableURLRequest *request = [[[OAMutableURLRequest alloc] initWithURL:url
+        SCAVENGEROAMutableURLRequest *request = [[[SCAVENGEROAMutableURLRequest alloc] initWithURL:url
                                                                        consumer:consumer
                                                                           token:nil   // we don't have a Token yet
                                                                           realm:nil   // our service provider doesn't specify a realm
@@ -135,7 +135,7 @@ static NSInteger OAuthCredentialsErrorCode = -215;
         
         [request setHTTPMethod:@"POST"];
         
-        OADataFetcher *fetcher = [[OADataFetcher alloc] init];
+        SCAVENGEROADataFetcher *fetcher = [[SCAVENGEROADataFetcher alloc] init];
         
         [fetcher fetchDataWithRequest:request
                              delegate:self
@@ -145,12 +145,12 @@ static NSInteger OAuthCredentialsErrorCode = -215;
 }
 
 
-- (void)requestTokenTicket:(OAServiceTicket *)ticket didFinishWithData:(NSData *)data {
+- (void)requestTokenTicket:(SCAVENGEROAServiceTicket *)ticket didFinishWithData:(NSData *)data {
     if (ticket.didSucceed && data) {
         NSString *responseBody = [[NSString alloc] initWithData:data
                                                        encoding:NSUTF8StringEncoding];
         
-        OAToken *token = [[OAToken alloc] initWithHTTPResponseBody:responseBody];
+        SCAVENGEROAToken *token = [[SCAVENGEROAToken alloc] initWithHTTPResponseBody:responseBody];
         self.requestToken = token;
         [token release];
         [responseBody release];
@@ -170,7 +170,7 @@ static NSInteger OAuthCredentialsErrorCode = -215;
     }
 }
 
-- (void)requestTokenTicket:(OAServiceTicket *)ticket didFailWithError:(NSError *)error {
+- (void)requestTokenTicket:(SCAVENGEROAServiceTicket *)ticket didFailWithError:(NSError *)error {
     BitlyLog(@"Request token ticket failed: %@", [error localizedDescription]);
     requestTokenCompletionHandler(NO, error);
 }
@@ -183,7 +183,7 @@ static NSInteger OAuthCredentialsErrorCode = -215;
     });
 }
 
-- (void)getAccessTokenWithRequestToken:(OAToken *)token verifier:(NSString *)verifier {
+- (void)getAccessTokenWithRequestToken:(SCAVENGEROAToken *)token verifier:(NSString *)verifier {
     BitlyConfig *config = [BitlyConfig sharedBitlyConfig];
     NSString *twitterOAuthConsumerKey = [config twitterOAuthConsumerKey];
     NSString *twitterOAuthConsumerSecret = [config twitterOAuthConsumerSecret];
@@ -199,12 +199,12 @@ static NSInteger OAuthCredentialsErrorCode = -215;
         
     } else {
 
-        OAConsumer *consumer = [[[OAConsumer alloc] initWithKey:twitterOAuthConsumerKey
+        SCAVENGEROAConsumer *consumer = [[[SCAVENGEROAConsumer alloc] initWithKey:twitterOAuthConsumerKey
                                                          secret:twitterOAuthConsumerSecret] autorelease];
         
         NSURL *accessTokenURL = [NSURL URLWithString:BitlyTwitterAccessTokenURL];
         
-        OAMutableURLRequest *request = [[[OAMutableURLRequest alloc] initWithURL:accessTokenURL
+        SCAVENGEROAMutableURLRequest *request = [[[SCAVENGEROAMutableURLRequest alloc] initWithURL:accessTokenURL
                                                                        consumer:consumer
                                                                           token:token
                                                                           realm:nil   // our service provider doesn't specify a realm
@@ -214,7 +214,7 @@ static NSInteger OAuthCredentialsErrorCode = -215;
         
         [request setHTTPMethod:@"POST"];
         
-        OADataFetcher *fetcher = [[OADataFetcher alloc] init];
+        SCAVENGEROADataFetcher *fetcher = [[SCAVENGEROADataFetcher alloc] init];
         
         [fetcher fetchDataWithRequest:request
                              delegate:self
@@ -224,7 +224,7 @@ static NSInteger OAuthCredentialsErrorCode = -215;
 }
 
 
-- (void)accessTokenTicket:(OAServiceTicket *)ticket didFinishWithData:(NSData *)data {
+- (void)accessTokenTicket:(SCAVENGEROAServiceTicket *)ticket didFinishWithData:(NSData *)data {
     if (ticket.didSucceed && data) {
         NSString *responseBody = [[NSString alloc] initWithData:data
                                                        encoding:NSUTF8StringEncoding];
@@ -271,7 +271,7 @@ static NSInteger OAuthCredentialsErrorCode = -215;
 }
 
 
-- (void)accessTokenTicket:(OAServiceTicket *)ticket didFailWithError:(NSError *)error {
+- (void)accessTokenTicket:(SCAVENGEROAServiceTicket *)ticket didFailWithError:(NSError *)error {
     BitlyLog(@"Access token ticket failed: %@", [error localizedDescription]);
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:error forKey:BitlyTwitterOauthErrorUserInfoKey];
     [[NSNotificationCenter defaultCenter] postNotificationName:BitlyTwitterOAuthFailedNotification object:self userInfo:userInfo];
@@ -298,12 +298,12 @@ completionHandler:(BitlyTweetCompletionHandler)completionHandler {
         tweetCompletionHandler(NO, error);
     } else {
     
-        OAConsumer *consumer = [[[OAConsumer alloc] initWithKey:twitterOAuthConsumerKey
+        SCAVENGEROAConsumer *consumer = [[[SCAVENGEROAConsumer alloc] initWithKey:twitterOAuthConsumerKey
                                                          secret:twitterOAuthConsumerSecret] autorelease];
         
         
         
-        OAMutableURLRequest *request = [[[OAMutableURLRequest alloc] initWithURL:statusURL
+        SCAVENGEROAMutableURLRequest *request = [[[SCAVENGEROAMutableURLRequest alloc] initWithURL:statusURL
                                                                        consumer:consumer
                                                                           token:account.oauthConsumerToken
                                                                           realm:nil
@@ -311,7 +311,7 @@ completionHandler:(BitlyTweetCompletionHandler)completionHandler {
         
         [request setHTTPMethod:@"POST"];
         
-        OARequestParameter *statusParam = [[OARequestParameter alloc] initWithName:@"status"
+        SCAVENGEROARequestParameter *statusParam = [[SCAVENGEROARequestParameter alloc] initWithName:@"status"
                                                                              value:tweet];
            
         NSArray *params = [NSArray arrayWithObject:statusParam];
@@ -319,7 +319,7 @@ completionHandler:(BitlyTweetCompletionHandler)completionHandler {
         [statusParam release];
         
            
-        OADataFetcher *fetcher = [[OADataFetcher alloc] init];
+        SCAVENGEROADataFetcher *fetcher = [[SCAVENGEROADataFetcher alloc] init];
         [fetcher fetchDataWithRequest:request
                              delegate:self
                     didFinishSelector:@selector(apiTicket:didFinishWithData:)
@@ -327,7 +327,7 @@ completionHandler:(BitlyTweetCompletionHandler)completionHandler {
     }
 }
 
-- (void)apiTicket:(OAServiceTicket *)ticket didFinishWithData:(NSData *)data {
+- (void)apiTicket:(SCAVENGEROAServiceTicket *)ticket didFinishWithData:(NSData *)data {
     
     if (ticket.didSucceed && data) {
         NSString *responseBody = [[NSString alloc] initWithData:data
@@ -348,7 +348,7 @@ completionHandler:(BitlyTweetCompletionHandler)completionHandler {
     }
 }
 
-- (void)apiTicket:(OAServiceTicket *)ticket didFailWithError:(NSError *)error {
+- (void)apiTicket:(SCAVENGEROAServiceTicket *)ticket didFailWithError:(NSError *)error {
     
     BitlyLog(@"Status api req failed: %@", [error localizedDescription]);
     tweetCompletionHandler(NO, error);

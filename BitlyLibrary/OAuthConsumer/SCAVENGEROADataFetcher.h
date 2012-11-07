@@ -1,8 +1,8 @@
 //
-//  OARequestParameter.m
+//  OADataFetcher.h
 //  OAuthConsumer
 //
-//  Created by Jon Crosby on 10/19/07.
+//  Created by Jon Crosby on 11/5/07.
 //  Copyright 2007 Kaboomerang LLC. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,49 +23,22 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+#import <Foundation/Foundation.h>
+#import "SCAVENGEROAMutableURLRequest.h"
+#import "SCAVENGEROAServiceTicket.h"
 
-#import "OARequestParameter.h"
 
-
-@implementation OARequestParameter
-@synthesize name, value;
-
-+ (id)requestParameterWithName:(NSString *)aName value:(NSString *)aValue 
-{
-	return [[[OARequestParameter alloc] initWithName:aName value:aValue] autorelease];
+@interface SCAVENGEROADataFetcher : NSObject {
+@private
+    SCAVENGEROAMutableURLRequest *request;
+    NSURLResponse *response;
+    NSError *error;
+    NSData *responseData;
+    id delegate;
+    SEL didFinishSelector;
+    SEL didFailSelector;
 }
 
-- (id)initWithName:(NSString *)aName value:(NSString *)aValue 
-{
-    self = [super init];
-    if (self)
-	{
-		self.name = aName;
-		self.value = aValue;
-	}
-    return self;
-}
-
-- (void)dealloc
-{
-	[name release];
-	[value release];
-	[super dealloc];
-}
-
-- (NSString *)URLEncodedName 
-{
-	return [self.name URLEncodedString];
-}
-
-- (NSString *)URLEncodedValue 
-{
-    return [self.value URLEncodedString];
-}
-
-- (NSString *)URLEncodedNameValuePair 
-{
-    return [NSString stringWithFormat:@"%@=%@", [self URLEncodedName], [self URLEncodedValue]];
-}
+- (void)fetchDataWithRequest:(SCAVENGEROAMutableURLRequest *)aRequest delegate:(id)aDelegate didFinishSelector:(SEL)finishSelector didFailSelector:(SEL)failSelector;
 
 @end

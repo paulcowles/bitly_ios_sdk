@@ -1,9 +1,8 @@
 //
-//  OAPlaintextSignatureProvider.m
+//  OAAsynchronousDataFetcher.h
 //  OAuthConsumer
 //
-//  Created by Jon Crosby on 10/19/07.
-//  Copyright 2007 Kaboomerang LLC. All rights reserved.
+//  Created by Zsombor Szabó on 12/3/08.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -23,21 +22,24 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+#import <Foundation/Foundation.h>
 
-#import "OAPlaintextSignatureProvider.h"
-#import "NSString+URLEncoding.h"
+#import "SCAVENGEROAMutableURLRequest.h"
 
-
-@implementation OAPlaintextSignatureProvider
-
-- (NSString *)name 
-{
-    return @"PLAINTEXT";
+@interface SCAVENGEROAAsynchronousDataFetcher : NSObject {
+    SCAVENGEROAMutableURLRequest *request;
+    NSURLResponse *response;
+    NSURLConnection *connection;
+    NSMutableData *responseData;
+    id delegate;
+    SEL didFinishSelector;
+    SEL didFailSelector;	
 }
 
-- (NSString *)signClearText:(NSString *)text withSecret:(NSString *)secret 
-{
-    return secret;
-}
++ (id)asynchronousFetcherWithRequest:(SCAVENGEROAMutableURLRequest *)aRequest delegate:(id)aDelegate didFinishSelector:(SEL)finishSelector didFailSelector:(SEL)failSelector;
+- (id)initWithRequest:(SCAVENGEROAMutableURLRequest *)aRequest delegate:(id)aDelegate didFinishSelector:(SEL)finishSelector didFailSelector:(SEL)failSelector;
+
+- (void)start;
+- (void)cancel;
 
 @end

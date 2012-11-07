@@ -7,10 +7,10 @@
 //
 
 #import "BitlyTwitterOAuthViewController.h"
-#import "OAConsumer.h"
-#import "OAMutableURLRequest.h"
-#import "OADataFetcher.h"
-#import "OAPlaintextSignatureProvider.h"
+#import "SCAVENGEROAConsumer.h"
+#import "SCAVENGEROAMutableURLRequest.h"
+#import "SCAVENGEROADataFetcher.h"
+#import "SCAVENGEROAPlaintextSignatureProvider.h"
 #import "BitlyTwitterOAuthManager.h"
 #import "BitlyDebug.h"
 #import "BitlyConfig.h"

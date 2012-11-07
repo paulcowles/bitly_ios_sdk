@@ -44,8 +44,8 @@ NSString * const UserDefaultsKey = @"BitlyTwitterOAuthAccount";
     return (self.oauthKey && self.oauthSecret && self.username && self.userID);
 }
 
-- (OAToken *)oauthConsumerToken {
-    return [[[OAToken alloc] initWithKey:self.oauthKey secret:oauthSecret] autorelease];
+- (SCAVENGEROAToken *)oauthConsumerToken {
+    return [[[SCAVENGEROAToken alloc] initWithKey:self.oauthKey secret:oauthSecret] autorelease];
 }
 
 

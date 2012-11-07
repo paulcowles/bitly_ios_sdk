@@ -22,18 +22,18 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import "OAAsynchronousDataFetcher.h"
+#import "SCAVENGEROAAsynchronousDataFetcher.h"
 
-#import "OAServiceTicket.h"
+#import "SCAVENGEROAServiceTicket.h"
 
-@implementation OAAsynchronousDataFetcher
+@implementation SCAVENGEROAAsynchronousDataFetcher
 
-+ (id)asynchronousFetcherWithRequest:(OAMutableURLRequest *)aRequest delegate:(id)aDelegate didFinishSelector:(SEL)finishSelector didFailSelector:(SEL)failSelector
++ (id)asynchronousFetcherWithRequest:(SCAVENGEROAMutableURLRequest *)aRequest delegate:(id)aDelegate didFinishSelector:(SEL)finishSelector didFailSelector:(SEL)failSelector
 {
-	return [[[OAAsynchronousDataFetcher alloc] initWithRequest:aRequest delegate:aDelegate didFinishSelector:finishSelector didFailSelector:failSelector] autorelease];
+	return [[[SCAVENGEROAAsynchronousDataFetcher alloc] initWithRequest:aRequest delegate:aDelegate didFinishSelector:finishSelector didFailSelector:failSelector] autorelease];
 }
 
-- (id)initWithRequest:(OAMutableURLRequest *)aRequest delegate:(id)aDelegate didFinishSelector:(SEL)finishSelector didFailSelector:(SEL)failSelector
+- (id)initWithRequest:(SCAVENGEROAMutableURLRequest *)aRequest delegate:(id)aDelegate didFinishSelector:(SEL)finishSelector didFailSelector:(SEL)failSelector
 {
     self = [super init];
 	if (self)
@@ -63,7 +63,7 @@
 	}
 	else
 	{
-        OAServiceTicket *ticket= [[OAServiceTicket alloc] initWithRequest:request
+        SCAVENGEROAServiceTicket *ticket= [[SCAVENGEROAServiceTicket alloc] initWithRequest:request
                                                                  response:nil
                                                                didSucceed:NO];
         [delegate performSelector:didFailSelector
@@ -110,7 +110,7 @@
 
 - (void)connection:(NSURLConnection *)aConnection didFailWithError:(NSError *)error
 {
-	OAServiceTicket *ticket= [[OAServiceTicket alloc] initWithRequest:request
+	SCAVENGEROAServiceTicket *ticket= [[SCAVENGEROAServiceTicket alloc] initWithRequest:request
 															 response:response
 														   didSucceed:NO];
 	[delegate performSelector:didFailSelector
@@ -122,7 +122,7 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)aConnection
 {
-	OAServiceTicket *ticket = [[OAServiceTicket alloc] initWithRequest:request
+	SCAVENGEROAServiceTicket *ticket = [[SCAVENGEROAServiceTicket alloc] initWithRequest:request
 															  response:response
 															didSucceed:[(NSHTTPURLResponse *)response statusCode] < 400];
 	[delegate performSelector:didFinishSelector

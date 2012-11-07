@@ -1,5 +1,5 @@
 //
-//  OAToken.h
+//  OAConsumer.m
 //  OAuthConsumer
 //
 //  Created by Jon Crosby on 10/19/07.
@@ -23,19 +23,30 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "SCAVENGEROAConsumer.h"
 
-@interface OAToken : NSObject {
-@protected
-	NSString *key;
-	NSString *secret;
+
+@implementation SCAVENGEROAConsumer
+@synthesize key, secret;
+
+#pragma mark init
+
+- (id)initWithKey:(NSString *)aKey secret:(NSString *)aSecret 
+{
+    self = [super init];
+	if (self)
+	{
+		self.key = aKey;
+		self.secret = aSecret;
+	}
+	return self;
 }
-@property(retain) NSString *key;
-@property(retain) NSString *secret;
 
-- (id)initWithKey:(NSString *)aKey secret:(NSString *)aSecret;
-- (id)initWithUserDefaultsUsingServiceProviderName:(NSString *)provider prefix:(NSString *)prefix;
-- (id)initWithHTTPResponseBody:(NSString *)body;
-- (int)storeInUserDefaultsWithServiceProviderName:(NSString *)provider prefix:(NSString *)prefix;
+- (void)dealloc
+{
+	[key release];
+	[secret release];
+	[super dealloc];
+}
 
 @end

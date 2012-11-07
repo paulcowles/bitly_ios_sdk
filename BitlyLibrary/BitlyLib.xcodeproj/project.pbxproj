@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5B1DE6E416140484003E51F9 /* BitlyLib_Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B1DE6E316140484003E51F9 /* BitlyLib_Base64Transcoder.c */; };
+		5B4B93FF164A99BA00FB0B52 /* SCAVENGEROARequestParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4B93FE164A99BA00FB0B52 /* SCAVENGEROARequestParameter.m */; };
+		5B4B9401164AA2BF00FB0B52 /* SCAVENGERCDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4B9400164AA2BF00FB0B52 /* SCAVENGERCDataScanner_Extensions.m */; };
 		5BCED5CE161680DC0069275F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BCED5CC161680DC0069275F /* InfoPlist.strings */; };
 		5BCED5D3161680E50069275F /* BitlyTweetSheet_iPad.xib in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF1614747C6500EDB90F /* BitlyTweetSheet_iPad.xib */; };
 		5BCED5D4161680E50069275F /* BitlyTweetSheet_iPhone.xib in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF1714747C6500EDB90F /* BitlyTweetSheet_iPhone.xib */; };
@@ -27,15 +29,14 @@
 		B1A11BBF13F1B8A700F8A7E5 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = B149032C13E9CEFE009DE846 /* NSMutableURLRequest+Parameters.m */; };
 		B1A11BC013F1B8A700F8A7E5 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B149033013E9CEFE009DE846 /* NSString+URLEncoding.m */; };
 		B1A11BC113F1B8A700F8A7E5 /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = B149033413E9CEFE009DE846 /* NSURL+Base.m */; };
-		B1A11BC213F1B8A700F8A7E5 /* OAAsynchronousDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B149033813E9CEFE009DE846 /* OAAsynchronousDataFetcher.m */; };
-		B1A11BC313F1B8A700F8A7E5 /* OAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = B149033A13E9CEFE009DE846 /* OAConsumer.m */; };
-		B1A11BC413F1B8A700F8A7E5 /* OADataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B149033E13E9CEFE009DE846 /* OADataFetcher.m */; };
+		B1A11BC213F1B8A700F8A7E5 /* SCAVENGEROAAsynchronousDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B149033813E9CEFE009DE846 /* SCAVENGEROAAsynchronousDataFetcher.m */; };
+		B1A11BC313F1B8A700F8A7E5 /* SCAVENGEROAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = B149033A13E9CEFE009DE846 /* SCAVENGEROAConsumer.m */; };
+		B1A11BC413F1B8A700F8A7E5 /* SCAVENGEROADataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B149033E13E9CEFE009DE846 /* SCAVENGEROADataFetcher.m */; };
 		B1A11BC513F1B8A700F8A7E5 /* BitlyLib_OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B149034213E9CEFE009DE846 /* BitlyLib_OAHMAC_SHA1SignatureProvider.m */; };
-		B1A11BC613F1B8A700F8A7E5 /* OAMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B149034613E9CEFE009DE846 /* OAMutableURLRequest.m */; };
-		B1A11BC713F1B8A700F8A7E5 /* OAPlaintextSignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B149034A13E9CEFE009DE846 /* OAPlaintextSignatureProvider.m */; };
-		B1A11BC813F1B8A700F8A7E5 /* OARequestParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = B149034E13E9CEFE009DE846 /* OARequestParameter.m */; };
-		B1A11BC913F1B8A700F8A7E5 /* OAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = B149035213E9CEFE009DE846 /* OAServiceTicket.m */; };
-		B1A11BCA13F1B8A700F8A7E5 /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = B149035613E9CEFE009DE846 /* OAToken.m */; };
+		B1A11BC613F1B8A700F8A7E5 /* SCAVENGEROAMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B149034613E9CEFE009DE846 /* SCAVENGEROAMutableURLRequest.m */; };
+		B1A11BC713F1B8A700F8A7E5 /* SCAVENGEROAPlaintextSignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B149034A13E9CEFE009DE846 /* SCAVENGEROAPlaintextSignatureProvider.m */; };
+		B1A11BC913F1B8A700F8A7E5 /* SCAVENGEROAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = B149035213E9CEFE009DE846 /* SCAVENGEROAServiceTicket.m */; };
+		B1A11BCA13F1B8A700F8A7E5 /* SCAVENGEROAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = B149035613E9CEFE009DE846 /* SCAVENGEROAToken.m */; };
 		B1A11BCB13F1B8BA00F8A7E5 /* BitlyTwitterOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B14903E413EC6A87009DE846 /* BitlyTwitterOAuthViewController.m */; };
 		B1A11BCC13F1B8BA00F8A7E5 /* BitlyTwitterOAuthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B171B55B13CCEF6A00024D0C /* BitlyTwitterOAuthManager.m */; };
 		B1A11BCD13F1B8BA00F8A7E5 /* BitlyTwitterOAuthAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A2BAB913CF3EBD0084174F /* BitlyTwitterOAuthAccount.m */; };
@@ -46,26 +47,25 @@
 		B1A11BD213F1B8BA00F8A7E5 /* BitlyLibUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B19202CC13B933BC0017A136 /* BitlyLibUtil.m */; };
 		B1A11BD313F1B8BA00F8A7E5 /* BitlyTweetSheetAccountSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = B10DAC0313C38DDC00B9A155 /* BitlyTweetSheetAccountSelector.m */; };
 		B1A11BD413F1B8BA00F8A7E5 /* BitlyDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = B14903D813EC49BA009DE846 /* BitlyDebug.m */; };
-		B1DFCBFE1471B34A003FAED2 /* CDataScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBE61471B34A003FAED2 /* CDataScanner.h */; };
-		B1DFCBFF1471B34A003FAED2 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBE71471B34A003FAED2 /* CDataScanner.m */; };
+		B1DFCBFE1471B34A003FAED2 /* SCAVENGERCDataScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBE61471B34A003FAED2 /* SCAVENGERCDataScanner.h */; };
+		B1DFCBFF1471B34A003FAED2 /* SCAVENGERCDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBE71471B34A003FAED2 /* SCAVENGERCDataScanner.m */; };
 		B1DFCC001471B34A003FAED2 /* CFilteringJSONSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBE91471B34A003FAED2 /* CFilteringJSONSerializer.h */; };
 		B1DFCC011471B34A003FAED2 /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBEA1471B34A003FAED2 /* CFilteringJSONSerializer.m */; };
 		B1DFCC021471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBEB1471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.h */; };
 		B1DFCC031471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBEC1471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.m */; };
-		B1DFCC041471B34A003FAED2 /* CJSONSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBED1471B34A003FAED2 /* CJSONSerialization.h */; };
-		B1DFCC051471B34A003FAED2 /* CJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBEE1471B34A003FAED2 /* CJSONSerialization.m */; };
-		B1DFCC061471B34A003FAED2 /* CJSONSerializedData.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBEF1471B34A003FAED2 /* CJSONSerializedData.h */; };
-		B1DFCC071471B34A003FAED2 /* CJSONSerializedData.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBF01471B34A003FAED2 /* CJSONSerializedData.m */; };
-		B1DFCC081471B34A003FAED2 /* CDataScanner_Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBF21471B34A003FAED2 /* CDataScanner_Extensions.h */; };
-		B1DFCC091471B34A003FAED2 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBF31471B34A003FAED2 /* CDataScanner_Extensions.m */; };
+		B1DFCC041471B34A003FAED2 /* SCAVENGERCJSONSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBED1471B34A003FAED2 /* SCAVENGERCJSONSerialization.h */; };
+		B1DFCC051471B34A003FAED2 /* SCAVENGERCJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBEE1471B34A003FAED2 /* SCAVENGERCJSONSerialization.m */; };
+		B1DFCC061471B34A003FAED2 /* SCAVENGERCJSONSerializedData.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBEF1471B34A003FAED2 /* SCAVENGERCJSONSerializedData.h */; };
+		B1DFCC071471B34A003FAED2 /* SCAVENGERCJSONSerializedData.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBF01471B34A003FAED2 /* SCAVENGERCJSONSerializedData.m */; };
+		B1DFCC081471B34A003FAED2 /* SCAVENGERCDataScanner_Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBF21471B34A003FAED2 /* SCAVENGERCDataScanner_Extensions.h */; };
 		B1DFCC0A1471B34A003FAED2 /* NSDictionary_JSONExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBF41471B34A003FAED2 /* NSDictionary_JSONExtensions.h */; };
 		B1DFCC0B1471B34A003FAED2 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBF51471B34A003FAED2 /* NSDictionary_JSONExtensions.m */; };
-		B1DFCC0C1471B34A003FAED2 /* CJSONDeserializer.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBF71471B34A003FAED2 /* CJSONDeserializer.h */; };
-		B1DFCC0D1471B34A003FAED2 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBF81471B34A003FAED2 /* CJSONDeserializer.m */; };
-		B1DFCC0E1471B34A003FAED2 /* CJSONScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBF91471B34A003FAED2 /* CJSONScanner.h */; };
-		B1DFCC0F1471B34A003FAED2 /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBFA1471B34A003FAED2 /* CJSONScanner.m */; };
-		B1DFCC101471B34A003FAED2 /* CJSONSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBFB1471B34A003FAED2 /* CJSONSerializer.h */; };
-		B1DFCC111471B34A003FAED2 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBFC1471B34A003FAED2 /* CJSONSerializer.m */; };
+		B1DFCC0C1471B34A003FAED2 /* SCAVENGERCJSONDeserializer.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBF71471B34A003FAED2 /* SCAVENGERCJSONDeserializer.h */; };
+		B1DFCC0D1471B34A003FAED2 /* SCAVENGERCJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBF81471B34A003FAED2 /* SCAVENGERCJSONDeserializer.m */; };
+		B1DFCC0E1471B34A003FAED2 /* SCAVENGERCJSONScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBF91471B34A003FAED2 /* SCAVENGERCJSONScanner.h */; };
+		B1DFCC0F1471B34A003FAED2 /* SCAVENGERCJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBFA1471B34A003FAED2 /* SCAVENGERCJSONScanner.m */; };
+		B1DFCC101471B34A003FAED2 /* SCAVENGERCJSONSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBFB1471B34A003FAED2 /* SCAVENGERCJSONSerializer.h */; };
+		B1DFCC111471B34A003FAED2 /* SCAVENGERCJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBFC1471B34A003FAED2 /* SCAVENGERCJSONSerializer.m */; };
 		B1DFCC121471B34A003FAED2 /* JSONRepresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBFD1471B34A003FAED2 /* JSONRepresentation.h */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +81,8 @@
 
 /* Begin PBXFileReference section */
 		5B1DE6E316140484003E51F9 /* BitlyLib_Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BitlyLib_Base64Transcoder.c; sourceTree = "<group>"; };
+		5B4B93FE164A99BA00FB0B52 /* SCAVENGEROARequestParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGEROARequestParameter.m; sourceTree = "<group>"; };
+		5B4B9400164AA2BF00FB0B52 /* SCAVENGERCDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERCDataScanner_Extensions.m; sourceTree = "<group>"; };
 		5BCED5C6161680DC0069275F /* BitlyXIB.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitlyXIB.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BCED5C7161680DC0069275F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		5BCED5CB161680DC0069275F /* BitlyXIB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BitlyXIB-Info.plist"; sourceTree = "<group>"; };
@@ -95,25 +97,24 @@
 		B149033013E9CEFE009DE846 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
 		B149033313E9CEFE009DE846 /* NSURL+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Base.h"; sourceTree = "<group>"; };
 		B149033413E9CEFE009DE846 /* NSURL+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Base.m"; sourceTree = "<group>"; };
-		B149033713E9CEFE009DE846 /* OAAsynchronousDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAAsynchronousDataFetcher.h; sourceTree = "<group>"; };
-		B149033813E9CEFE009DE846 /* OAAsynchronousDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAAsynchronousDataFetcher.m; sourceTree = "<group>"; };
-		B149033913E9CEFE009DE846 /* OAConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAConsumer.h; sourceTree = "<group>"; };
-		B149033A13E9CEFE009DE846 /* OAConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAConsumer.m; sourceTree = "<group>"; };
-		B149033D13E9CEFE009DE846 /* OADataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OADataFetcher.h; sourceTree = "<group>"; };
-		B149033E13E9CEFE009DE846 /* OADataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OADataFetcher.m; sourceTree = "<group>"; };
+		B149033713E9CEFE009DE846 /* SCAVENGEROAAsynchronousDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGEROAAsynchronousDataFetcher.h; sourceTree = "<group>"; };
+		B149033813E9CEFE009DE846 /* SCAVENGEROAAsynchronousDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGEROAAsynchronousDataFetcher.m; sourceTree = "<group>"; };
+		B149033913E9CEFE009DE846 /* SCAVENGEROAConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGEROAConsumer.h; sourceTree = "<group>"; };
+		B149033A13E9CEFE009DE846 /* SCAVENGEROAConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGEROAConsumer.m; sourceTree = "<group>"; };
+		B149033D13E9CEFE009DE846 /* SCAVENGEROADataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGEROADataFetcher.h; sourceTree = "<group>"; };
+		B149033E13E9CEFE009DE846 /* SCAVENGEROADataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGEROADataFetcher.m; sourceTree = "<group>"; };
 		B149034113E9CEFE009DE846 /* BitlyLib_OAHMAC_SHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitlyLib_OAHMAC_SHA1SignatureProvider.h; sourceTree = "<group>"; };
 		B149034213E9CEFE009DE846 /* BitlyLib_OAHMAC_SHA1SignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitlyLib_OAHMAC_SHA1SignatureProvider.m; sourceTree = "<group>"; };
-		B149034513E9CEFE009DE846 /* OAMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAMutableURLRequest.h; sourceTree = "<group>"; };
-		B149034613E9CEFE009DE846 /* OAMutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAMutableURLRequest.m; sourceTree = "<group>"; };
-		B149034913E9CEFE009DE846 /* OAPlaintextSignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAPlaintextSignatureProvider.h; sourceTree = "<group>"; };
-		B149034A13E9CEFE009DE846 /* OAPlaintextSignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAPlaintextSignatureProvider.m; sourceTree = "<group>"; };
-		B149034D13E9CEFE009DE846 /* OARequestParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OARequestParameter.h; sourceTree = "<group>"; };
-		B149034E13E9CEFE009DE846 /* OARequestParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OARequestParameter.m; sourceTree = "<group>"; };
-		B149035113E9CEFE009DE846 /* OAServiceTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAServiceTicket.h; sourceTree = "<group>"; };
-		B149035213E9CEFE009DE846 /* OAServiceTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAServiceTicket.m; sourceTree = "<group>"; };
+		B149034513E9CEFE009DE846 /* SCAVENGEROAMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGEROAMutableURLRequest.h; sourceTree = "<group>"; };
+		B149034613E9CEFE009DE846 /* SCAVENGEROAMutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGEROAMutableURLRequest.m; sourceTree = "<group>"; };
+		B149034913E9CEFE009DE846 /* SCAVENGEROAPlaintextSignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGEROAPlaintextSignatureProvider.h; sourceTree = "<group>"; };
+		B149034A13E9CEFE009DE846 /* SCAVENGEROAPlaintextSignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGEROAPlaintextSignatureProvider.m; sourceTree = "<group>"; };
+		B149034D13E9CEFE009DE846 /* SCAVENGEROARequestParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGEROARequestParameter.h; sourceTree = "<group>"; };
+		B149035113E9CEFE009DE846 /* SCAVENGEROAServiceTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGEROAServiceTicket.h; sourceTree = "<group>"; };
+		B149035213E9CEFE009DE846 /* SCAVENGEROAServiceTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGEROAServiceTicket.m; sourceTree = "<group>"; };
 		B149035313E9CEFE009DE846 /* OASignatureProviding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASignatureProviding.h; sourceTree = "<group>"; };
-		B149035513E9CEFE009DE846 /* OAToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAToken.h; sourceTree = "<group>"; };
-		B149035613E9CEFE009DE846 /* OAToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAToken.m; sourceTree = "<group>"; };
+		B149035513E9CEFE009DE846 /* SCAVENGEROAToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGEROAToken.h; sourceTree = "<group>"; };
+		B149035613E9CEFE009DE846 /* SCAVENGEROAToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGEROAToken.m; sourceTree = "<group>"; };
 		B149035B13E9CEFE009DE846 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
 		B14903D813EC49BA009DE846 /* BitlyDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitlyDebug.m; sourceTree = "<group>"; };
 		B14903E313EC6A87009DE846 /* BitlyTwitterOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitlyTwitterOAuthViewController.h; sourceTree = "<group>"; };
@@ -149,26 +150,25 @@
 		B1B0034113B9079100A08745 /* BitlyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitlyRequest.m; sourceTree = "<group>"; };
 		B1B0034313B9079100A08745 /* BitlyURLShortener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitlyURLShortener.m; sourceTree = "<group>"; };
 		B1B0935F13CCE8FA009C5A70 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		B1DFCBE61471B34A003FAED2 /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
-		B1DFCBE71471B34A003FAED2 /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
+		B1DFCBE61471B34A003FAED2 /* SCAVENGERCDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERCDataScanner.h; sourceTree = "<group>"; };
+		B1DFCBE71471B34A003FAED2 /* SCAVENGERCDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERCDataScanner.m; sourceTree = "<group>"; };
 		B1DFCBE91471B34A003FAED2 /* CFilteringJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFilteringJSONSerializer.h; sourceTree = "<group>"; };
 		B1DFCBEA1471B34A003FAED2 /* CFilteringJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFilteringJSONSerializer.m; sourceTree = "<group>"; };
 		B1DFCBEB1471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer_BlocksExtensions.h; sourceTree = "<group>"; };
 		B1DFCBEC1471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer_BlocksExtensions.m; sourceTree = "<group>"; };
-		B1DFCBED1471B34A003FAED2 /* CJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerialization.h; sourceTree = "<group>"; };
-		B1DFCBEE1471B34A003FAED2 /* CJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerialization.m; sourceTree = "<group>"; };
-		B1DFCBEF1471B34A003FAED2 /* CJSONSerializedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializedData.h; sourceTree = "<group>"; };
-		B1DFCBF01471B34A003FAED2 /* CJSONSerializedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializedData.m; sourceTree = "<group>"; };
-		B1DFCBF21471B34A003FAED2 /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
-		B1DFCBF31471B34A003FAED2 /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
+		B1DFCBED1471B34A003FAED2 /* SCAVENGERCJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERCJSONSerialization.h; sourceTree = "<group>"; };
+		B1DFCBEE1471B34A003FAED2 /* SCAVENGERCJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERCJSONSerialization.m; sourceTree = "<group>"; };
+		B1DFCBEF1471B34A003FAED2 /* SCAVENGERCJSONSerializedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERCJSONSerializedData.h; sourceTree = "<group>"; };
+		B1DFCBF01471B34A003FAED2 /* SCAVENGERCJSONSerializedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERCJSONSerializedData.m; sourceTree = "<group>"; };
+		B1DFCBF21471B34A003FAED2 /* SCAVENGERCDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERCDataScanner_Extensions.h; sourceTree = "<group>"; };
 		B1DFCBF41471B34A003FAED2 /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
 		B1DFCBF51471B34A003FAED2 /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
-		B1DFCBF71471B34A003FAED2 /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
-		B1DFCBF81471B34A003FAED2 /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
-		B1DFCBF91471B34A003FAED2 /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
-		B1DFCBFA1471B34A003FAED2 /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
-		B1DFCBFB1471B34A003FAED2 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
-		B1DFCBFC1471B34A003FAED2 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		B1DFCBF71471B34A003FAED2 /* SCAVENGERCJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERCJSONDeserializer.h; sourceTree = "<group>"; };
+		B1DFCBF81471B34A003FAED2 /* SCAVENGERCJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERCJSONDeserializer.m; sourceTree = "<group>"; };
+		B1DFCBF91471B34A003FAED2 /* SCAVENGERCJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERCJSONScanner.h; sourceTree = "<group>"; };
+		B1DFCBFA1471B34A003FAED2 /* SCAVENGERCJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERCJSONScanner.m; sourceTree = "<group>"; };
+		B1DFCBFB1471B34A003FAED2 /* SCAVENGERCJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERCJSONSerializer.h; sourceTree = "<group>"; };
+		B1DFCBFC1471B34A003FAED2 /* SCAVENGERCJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERCJSONSerializer.m; sourceTree = "<group>"; };
 		B1DFCBFD1471B34A003FAED2 /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,25 +222,25 @@
 				B149033013E9CEFE009DE846 /* NSString+URLEncoding.m */,
 				B149033313E9CEFE009DE846 /* NSURL+Base.h */,
 				B149033413E9CEFE009DE846 /* NSURL+Base.m */,
-				B149033713E9CEFE009DE846 /* OAAsynchronousDataFetcher.h */,
-				B149033813E9CEFE009DE846 /* OAAsynchronousDataFetcher.m */,
-				B149033913E9CEFE009DE846 /* OAConsumer.h */,
-				B149033A13E9CEFE009DE846 /* OAConsumer.m */,
-				B149033D13E9CEFE009DE846 /* OADataFetcher.h */,
-				B149033E13E9CEFE009DE846 /* OADataFetcher.m */,
+				B149033713E9CEFE009DE846 /* SCAVENGEROAAsynchronousDataFetcher.h */,
+				B149033813E9CEFE009DE846 /* SCAVENGEROAAsynchronousDataFetcher.m */,
+				B149033913E9CEFE009DE846 /* SCAVENGEROAConsumer.h */,
+				B149033A13E9CEFE009DE846 /* SCAVENGEROAConsumer.m */,
+				B149033D13E9CEFE009DE846 /* SCAVENGEROADataFetcher.h */,
+				B149033E13E9CEFE009DE846 /* SCAVENGEROADataFetcher.m */,
 				B149034113E9CEFE009DE846 /* BitlyLib_OAHMAC_SHA1SignatureProvider.h */,
 				B149034213E9CEFE009DE846 /* BitlyLib_OAHMAC_SHA1SignatureProvider.m */,
-				B149034513E9CEFE009DE846 /* OAMutableURLRequest.h */,
-				B149034613E9CEFE009DE846 /* OAMutableURLRequest.m */,
-				B149034913E9CEFE009DE846 /* OAPlaintextSignatureProvider.h */,
-				B149034A13E9CEFE009DE846 /* OAPlaintextSignatureProvider.m */,
-				B149034D13E9CEFE009DE846 /* OARequestParameter.h */,
-				B149034E13E9CEFE009DE846 /* OARequestParameter.m */,
-				B149035113E9CEFE009DE846 /* OAServiceTicket.h */,
-				B149035213E9CEFE009DE846 /* OAServiceTicket.m */,
+				B149034513E9CEFE009DE846 /* SCAVENGEROAMutableURLRequest.h */,
+				B149034613E9CEFE009DE846 /* SCAVENGEROAMutableURLRequest.m */,
+				B149034913E9CEFE009DE846 /* SCAVENGEROAPlaintextSignatureProvider.h */,
+				B149034A13E9CEFE009DE846 /* SCAVENGEROAPlaintextSignatureProvider.m */,
+				B149034D13E9CEFE009DE846 /* SCAVENGEROARequestParameter.h */,
+				5B4B93FE164A99BA00FB0B52 /* SCAVENGEROARequestParameter.m */,
+				B149035113E9CEFE009DE846 /* SCAVENGEROAServiceTicket.h */,
+				B149035213E9CEFE009DE846 /* SCAVENGEROAServiceTicket.m */,
 				B149035313E9CEFE009DE846 /* OASignatureProviding.h */,
-				B149035513E9CEFE009DE846 /* OAToken.h */,
-				B149035613E9CEFE009DE846 /* OAToken.m */,
+				B149035513E9CEFE009DE846 /* SCAVENGEROAToken.h */,
+				B149035613E9CEFE009DE846 /* SCAVENGEROAToken.m */,
 				B149035B13E9CEFE009DE846 /* OAuthConsumer.h */,
 			);
 			path = OAuthConsumer;
@@ -370,8 +370,8 @@
 		B1DFCBE51471B34A003FAED2 /* TouchJSON */ = {
 			isa = PBXGroup;
 			children = (
-				B1DFCBE61471B34A003FAED2 /* CDataScanner.h */,
-				B1DFCBE71471B34A003FAED2 /* CDataScanner.m */,
+				B1DFCBE61471B34A003FAED2 /* SCAVENGERCDataScanner.h */,
+				B1DFCBE71471B34A003FAED2 /* SCAVENGERCDataScanner.m */,
 				B1DFCBE81471B34A003FAED2 /* Experimental */,
 				B1DFCBF11471B34A003FAED2 /* Extensions */,
 				B1DFCBF61471B34A003FAED2 /* JSON */,
@@ -387,10 +387,10 @@
 				B1DFCBEA1471B34A003FAED2 /* CFilteringJSONSerializer.m */,
 				B1DFCBEB1471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.h */,
 				B1DFCBEC1471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.m */,
-				B1DFCBED1471B34A003FAED2 /* CJSONSerialization.h */,
-				B1DFCBEE1471B34A003FAED2 /* CJSONSerialization.m */,
-				B1DFCBEF1471B34A003FAED2 /* CJSONSerializedData.h */,
-				B1DFCBF01471B34A003FAED2 /* CJSONSerializedData.m */,
+				B1DFCBED1471B34A003FAED2 /* SCAVENGERCJSONSerialization.h */,
+				B1DFCBEE1471B34A003FAED2 /* SCAVENGERCJSONSerialization.m */,
+				B1DFCBEF1471B34A003FAED2 /* SCAVENGERCJSONSerializedData.h */,
+				B1DFCBF01471B34A003FAED2 /* SCAVENGERCJSONSerializedData.m */,
 			);
 			path = Experimental;
 			sourceTree = "<group>";
@@ -398,8 +398,8 @@
 		B1DFCBF11471B34A003FAED2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B1DFCBF21471B34A003FAED2 /* CDataScanner_Extensions.h */,
-				B1DFCBF31471B34A003FAED2 /* CDataScanner_Extensions.m */,
+				B1DFCBF21471B34A003FAED2 /* SCAVENGERCDataScanner_Extensions.h */,
+				5B4B9400164AA2BF00FB0B52 /* SCAVENGERCDataScanner_Extensions.m */,
 				B1DFCBF41471B34A003FAED2 /* NSDictionary_JSONExtensions.h */,
 				B1DFCBF51471B34A003FAED2 /* NSDictionary_JSONExtensions.m */,
 			);
@@ -409,12 +409,12 @@
 		B1DFCBF61471B34A003FAED2 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				B1DFCBF71471B34A003FAED2 /* CJSONDeserializer.h */,
-				B1DFCBF81471B34A003FAED2 /* CJSONDeserializer.m */,
-				B1DFCBF91471B34A003FAED2 /* CJSONScanner.h */,
-				B1DFCBFA1471B34A003FAED2 /* CJSONScanner.m */,
-				B1DFCBFB1471B34A003FAED2 /* CJSONSerializer.h */,
-				B1DFCBFC1471B34A003FAED2 /* CJSONSerializer.m */,
+				B1DFCBF71471B34A003FAED2 /* SCAVENGERCJSONDeserializer.h */,
+				B1DFCBF81471B34A003FAED2 /* SCAVENGERCJSONDeserializer.m */,
+				B1DFCBF91471B34A003FAED2 /* SCAVENGERCJSONScanner.h */,
+				B1DFCBFA1471B34A003FAED2 /* SCAVENGERCJSONScanner.m */,
+				B1DFCBFB1471B34A003FAED2 /* SCAVENGERCJSONSerializer.h */,
+				B1DFCBFC1471B34A003FAED2 /* SCAVENGERCJSONSerializer.m */,
 				B1DFCBFD1471B34A003FAED2 /* JSONRepresentation.h */,
 			);
 			path = JSON;
@@ -428,16 +428,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B19BE67914719813000190C4 /* BitlyLib-Prefix.pch in Headers */,
-				B1DFCBFE1471B34A003FAED2 /* CDataScanner.h in Headers */,
+				B1DFCBFE1471B34A003FAED2 /* SCAVENGERCDataScanner.h in Headers */,
 				B1DFCC001471B34A003FAED2 /* CFilteringJSONSerializer.h in Headers */,
 				B1DFCC021471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.h in Headers */,
-				B1DFCC041471B34A003FAED2 /* CJSONSerialization.h in Headers */,
-				B1DFCC061471B34A003FAED2 /* CJSONSerializedData.h in Headers */,
-				B1DFCC081471B34A003FAED2 /* CDataScanner_Extensions.h in Headers */,
+				B1DFCC041471B34A003FAED2 /* SCAVENGERCJSONSerialization.h in Headers */,
+				B1DFCC061471B34A003FAED2 /* SCAVENGERCJSONSerializedData.h in Headers */,
+				B1DFCC081471B34A003FAED2 /* SCAVENGERCDataScanner_Extensions.h in Headers */,
 				B1DFCC0A1471B34A003FAED2 /* NSDictionary_JSONExtensions.h in Headers */,
-				B1DFCC0C1471B34A003FAED2 /* CJSONDeserializer.h in Headers */,
-				B1DFCC0E1471B34A003FAED2 /* CJSONScanner.h in Headers */,
-				B1DFCC101471B34A003FAED2 /* CJSONSerializer.h in Headers */,
+				B1DFCC0C1471B34A003FAED2 /* SCAVENGERCJSONDeserializer.h in Headers */,
+				B1DFCC0E1471B34A003FAED2 /* SCAVENGERCJSONScanner.h in Headers */,
+				B1DFCC101471B34A003FAED2 /* SCAVENGERCJSONSerializer.h in Headers */,
 				B1DFCC121471B34A003FAED2 /* JSONRepresentation.h in Headers */,
 				B19CCF2114747C6500EDB90F /* BitlyConfig.h in Headers */,
 				B19CCF2214747C6500EDB90F /* BitlyDebug.h in Headers */,
@@ -560,15 +560,14 @@
 				B1A11BBF13F1B8A700F8A7E5 /* NSMutableURLRequest+Parameters.m in Sources */,
 				B1A11BC013F1B8A700F8A7E5 /* NSString+URLEncoding.m in Sources */,
 				B1A11BC113F1B8A700F8A7E5 /* NSURL+Base.m in Sources */,
-				B1A11BC213F1B8A700F8A7E5 /* OAAsynchronousDataFetcher.m in Sources */,
-				B1A11BC313F1B8A700F8A7E5 /* OAConsumer.m in Sources */,
-				B1A11BC413F1B8A700F8A7E5 /* OADataFetcher.m in Sources */,
+				B1A11BC213F1B8A700F8A7E5 /* SCAVENGEROAAsynchronousDataFetcher.m in Sources */,
+				B1A11BC313F1B8A700F8A7E5 /* SCAVENGEROAConsumer.m in Sources */,
+				B1A11BC413F1B8A700F8A7E5 /* SCAVENGEROADataFetcher.m in Sources */,
 				B1A11BC513F1B8A700F8A7E5 /* BitlyLib_OAHMAC_SHA1SignatureProvider.m in Sources */,
-				B1A11BC613F1B8A700F8A7E5 /* OAMutableURLRequest.m in Sources */,
-				B1A11BC713F1B8A700F8A7E5 /* OAPlaintextSignatureProvider.m in Sources */,
-				B1A11BC813F1B8A700F8A7E5 /* OARequestParameter.m in Sources */,
-				B1A11BC913F1B8A700F8A7E5 /* OAServiceTicket.m in Sources */,
-				B1A11BCA13F1B8A700F8A7E5 /* OAToken.m in Sources */,
+				B1A11BC613F1B8A700F8A7E5 /* SCAVENGEROAMutableURLRequest.m in Sources */,
+				B1A11BC713F1B8A700F8A7E5 /* SCAVENGEROAPlaintextSignatureProvider.m in Sources */,
+				B1A11BC913F1B8A700F8A7E5 /* SCAVENGEROAServiceTicket.m in Sources */,
+				B1A11BCA13F1B8A700F8A7E5 /* SCAVENGEROAToken.m in Sources */,
 				B1A11BCB13F1B8BA00F8A7E5 /* BitlyTwitterOAuthViewController.m in Sources */,
 				B1A11BCC13F1B8BA00F8A7E5 /* BitlyTwitterOAuthManager.m in Sources */,
 				B1A11BCD13F1B8BA00F8A7E5 /* BitlyTwitterOAuthAccount.m in Sources */,
@@ -580,17 +579,18 @@
 				B1A11BD313F1B8BA00F8A7E5 /* BitlyTweetSheetAccountSelector.m in Sources */,
 				B1A11BD413F1B8BA00F8A7E5 /* BitlyDebug.m in Sources */,
 				B15CACA913F5A229006D7EE7 /* BitlyConfig.m in Sources */,
-				B1DFCBFF1471B34A003FAED2 /* CDataScanner.m in Sources */,
+				B1DFCBFF1471B34A003FAED2 /* SCAVENGERCDataScanner.m in Sources */,
 				B1DFCC011471B34A003FAED2 /* CFilteringJSONSerializer.m in Sources */,
 				B1DFCC031471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.m in Sources */,
-				B1DFCC051471B34A003FAED2 /* CJSONSerialization.m in Sources */,
-				B1DFCC071471B34A003FAED2 /* CJSONSerializedData.m in Sources */,
-				B1DFCC091471B34A003FAED2 /* CDataScanner_Extensions.m in Sources */,
+				B1DFCC051471B34A003FAED2 /* SCAVENGERCJSONSerialization.m in Sources */,
+				B1DFCC071471B34A003FAED2 /* SCAVENGERCJSONSerializedData.m in Sources */,
 				B1DFCC0B1471B34A003FAED2 /* NSDictionary_JSONExtensions.m in Sources */,
-				B1DFCC0D1471B34A003FAED2 /* CJSONDeserializer.m in Sources */,
-				B1DFCC0F1471B34A003FAED2 /* CJSONScanner.m in Sources */,
-				B1DFCC111471B34A003FAED2 /* CJSONSerializer.m in Sources */,
+				B1DFCC0D1471B34A003FAED2 /* SCAVENGERCJSONDeserializer.m in Sources */,
+				B1DFCC0F1471B34A003FAED2 /* SCAVENGERCJSONScanner.m in Sources */,
+				B1DFCC111471B34A003FAED2 /* SCAVENGERCJSONSerializer.m in Sources */,
 				5B1DE6E416140484003E51F9 /* BitlyLib_Base64Transcoder.c in Sources */,
+				5B4B93FF164A99BA00FB0B52 /* SCAVENGEROARequestParameter.m in Sources */,
+				5B4B9401164AA2BF00FB0B52 /* SCAVENGERCDataScanner_Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

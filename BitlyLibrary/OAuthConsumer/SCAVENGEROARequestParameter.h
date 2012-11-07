@@ -1,8 +1,8 @@
 //
-//  OADataFetcher.h
+//  OARequestParameter.h
 //  OAuthConsumer
 //
-//  Created by Jon Crosby on 11/5/07.
+//  Created by Jon Crosby on 10/19/07.
 //  Copyright 2007 Kaboomerang LLC. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,22 +23,23 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+
 #import <Foundation/Foundation.h>
-#import "OAMutableURLRequest.h"
-#import "OAServiceTicket.h"
+#import "NSString+URLEncoding.h"
 
 
-@interface OADataFetcher : NSObject {
-@private
-    OAMutableURLRequest *request;
-    NSURLResponse *response;
-    NSError *error;
-    NSData *responseData;
-    id delegate;
-    SEL didFinishSelector;
-    SEL didFailSelector;
+@interface SCAVENGEROARequestParameter : NSObject {
+@protected
+    NSString *name;
+    NSString *value;
 }
+@property(retain) NSString *name;
+@property(retain) NSString *value;
 
-- (void)fetchDataWithRequest:(OAMutableURLRequest *)aRequest delegate:(id)aDelegate didFinishSelector:(SEL)finishSelector didFailSelector:(SEL)failSelector;
++ (id)requestParameterWithName:(NSString *)aName value:(NSString *)aValue;
+- (id)initWithName:(NSString *)aName value:(NSString *)aValue;
+- (NSString *)URLEncodedName;
+- (NSString *)URLEncodedValue;
+- (NSString *)URLEncodedNameValuePair;
 
 @end

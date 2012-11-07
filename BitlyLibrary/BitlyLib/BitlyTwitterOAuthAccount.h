@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OAToken.h"
+#import "SCAVENGEROAToken.h"
 
 @interface BitlyTwitterOAuthAccount : NSObject
 
@@ -22,7 +22,7 @@
 + (BitlyTwitterOAuthAccount *)savedAccount;
 + (void)removeSavedAccounts;
 
-- (OAToken *)oauthConsumerToken; 
+- (SCAVENGEROAToken *)oauthConsumerToken; 
 - (void)saveToKeychain;
 
 @end
