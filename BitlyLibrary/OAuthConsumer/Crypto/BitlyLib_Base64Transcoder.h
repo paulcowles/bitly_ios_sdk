@@ -28,9 +28,9 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-extern size_t BitlyLib_EstimateBas64EncodedDataSize(size_t inDataSize);
-extern size_t BitlyLib_EstimateBas64DecodedDataSize(size_t inDataSize);
+extern size_t BitlyLib_SCAVENGEREstimateBas64EncodedDataSize(size_t inDataSize);
+extern size_t BitlyLib_SCAVENGEREstimateBas64DecodedDataSize(size_t inDataSize);
 
 extern bool BitlyLib_Base64EncodeData(const void *inInputData, size_t inInputDataSize, char *outOutputData, size_t *ioOutputDataSize);
-extern bool BitlyLib_Base64DecodeData(const void *inInputData, size_t inInputDataSize, void *ioOutputData, size_t *ioOutputDataSize);
+extern bool BitlyLib_SCAVENGERBase64DecodeData(const void *inInputData, size_t inInputDataSize, void *ioOutputData, size_t *ioOutputDataSize);
 
