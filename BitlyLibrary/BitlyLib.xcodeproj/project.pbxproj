@@ -49,8 +49,8 @@
 		B1A11BD413F1B8BA00F8A7E5 /* BitlyDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = B14903D813EC49BA009DE846 /* BitlyDebug.m */; };
 		B1DFCBFE1471B34A003FAED2 /* SCAVENGERCDataScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBE61471B34A003FAED2 /* SCAVENGERCDataScanner.h */; };
 		B1DFCBFF1471B34A003FAED2 /* SCAVENGERCDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBE71471B34A003FAED2 /* SCAVENGERCDataScanner.m */; };
-		B1DFCC001471B34A003FAED2 /* CFilteringJSONSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBE91471B34A003FAED2 /* CFilteringJSONSerializer.h */; };
-		B1DFCC011471B34A003FAED2 /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBEA1471B34A003FAED2 /* CFilteringJSONSerializer.m */; };
+		B1DFCC001471B34A003FAED2 /* SCAVENGERCFilteringJSONSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBE91471B34A003FAED2 /* SCAVENGERCFilteringJSONSerializer.h */; };
+		B1DFCC011471B34A003FAED2 /* SCAVENGERCFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBEA1471B34A003FAED2 /* SCAVENGERCFilteringJSONSerializer.m */; };
 		B1DFCC021471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBEB1471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.h */; };
 		B1DFCC031471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DFCBEC1471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.m */; };
 		B1DFCC041471B34A003FAED2 /* SCAVENGERCJSONSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = B1DFCBED1471B34A003FAED2 /* SCAVENGERCJSONSerialization.h */; };
@@ -152,8 +152,8 @@
 		B1B0935F13CCE8FA009C5A70 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B1DFCBE61471B34A003FAED2 /* SCAVENGERCDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERCDataScanner.h; sourceTree = "<group>"; };
 		B1DFCBE71471B34A003FAED2 /* SCAVENGERCDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERCDataScanner.m; sourceTree = "<group>"; };
-		B1DFCBE91471B34A003FAED2 /* CFilteringJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFilteringJSONSerializer.h; sourceTree = "<group>"; };
-		B1DFCBEA1471B34A003FAED2 /* CFilteringJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFilteringJSONSerializer.m; sourceTree = "<group>"; };
+		B1DFCBE91471B34A003FAED2 /* SCAVENGERCFilteringJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERCFilteringJSONSerializer.h; sourceTree = "<group>"; };
+		B1DFCBEA1471B34A003FAED2 /* SCAVENGERCFilteringJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERCFilteringJSONSerializer.m; sourceTree = "<group>"; };
 		B1DFCBEB1471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer_BlocksExtensions.h; sourceTree = "<group>"; };
 		B1DFCBEC1471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer_BlocksExtensions.m; sourceTree = "<group>"; };
 		B1DFCBED1471B34A003FAED2 /* SCAVENGERCJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERCJSONSerialization.h; sourceTree = "<group>"; };
@@ -383,8 +383,8 @@
 		B1DFCBE81471B34A003FAED2 /* Experimental */ = {
 			isa = PBXGroup;
 			children = (
-				B1DFCBE91471B34A003FAED2 /* CFilteringJSONSerializer.h */,
-				B1DFCBEA1471B34A003FAED2 /* CFilteringJSONSerializer.m */,
+				B1DFCBE91471B34A003FAED2 /* SCAVENGERCFilteringJSONSerializer.h */,
+				B1DFCBEA1471B34A003FAED2 /* SCAVENGERCFilteringJSONSerializer.m */,
 				B1DFCBEB1471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.h */,
 				B1DFCBEC1471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.m */,
 				B1DFCBED1471B34A003FAED2 /* SCAVENGERCJSONSerialization.h */,
@@ -429,7 +429,7 @@
 			files = (
 				B19BE67914719813000190C4 /* BitlyLib-Prefix.pch in Headers */,
 				B1DFCBFE1471B34A003FAED2 /* SCAVENGERCDataScanner.h in Headers */,
-				B1DFCC001471B34A003FAED2 /* CFilteringJSONSerializer.h in Headers */,
+				B1DFCC001471B34A003FAED2 /* SCAVENGERCFilteringJSONSerializer.h in Headers */,
 				B1DFCC021471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.h in Headers */,
 				B1DFCC041471B34A003FAED2 /* SCAVENGERCJSONSerialization.h in Headers */,
 				B1DFCC061471B34A003FAED2 /* SCAVENGERCJSONSerializedData.h in Headers */,
@@ -580,7 +580,7 @@
 				B1A11BD413F1B8BA00F8A7E5 /* BitlyDebug.m in Sources */,
 				B15CACA913F5A229006D7EE7 /* BitlyConfig.m in Sources */,
 				B1DFCBFF1471B34A003FAED2 /* SCAVENGERCDataScanner.m in Sources */,
-				B1DFCC011471B34A003FAED2 /* CFilteringJSONSerializer.m in Sources */,
+				B1DFCC011471B34A003FAED2 /* SCAVENGERCFilteringJSONSerializer.m in Sources */,
 				B1DFCC031471B34A003FAED2 /* CJSONDeserializer_BlocksExtensions.m in Sources */,
 				B1DFCC051471B34A003FAED2 /* SCAVENGERCJSONSerialization.m in Sources */,
 				B1DFCC071471B34A003FAED2 /* SCAVENGERCJSONSerializedData.m in Sources */,
