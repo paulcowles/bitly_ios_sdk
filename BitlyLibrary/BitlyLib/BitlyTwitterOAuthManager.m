@@ -283,7 +283,7 @@ completionHandler:(BitlyTweetCompletionHandler)completionHandler {
     
     self.tweetCompletionHandler = completionHandler;
     
-    NSURL *statusURL = [NSURL URLWithString:@"https://api.twitter.com/1/statuses/update.json"];
+    NSURL *statusURL = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/update.json"];
     
     BitlyConfig *config = [BitlyConfig sharedBitlyConfig];
     NSString *twitterOAuthConsumerKey = [config twitterOAuthConsumerKey];
