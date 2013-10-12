@@ -166,6 +166,13 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
+    
+    if ( [self respondsToSelector:@selector(extendedLayoutIncludesOpaqueBars)] ) {
+        self.extendedLayoutIncludesOpaqueBars = YES;
+    }
+    if ( [self respondsToSelector:@selector(edgesForExtendedLayout)] ) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 
     self.navigationItem.title = @"Share on Twitter";
     
