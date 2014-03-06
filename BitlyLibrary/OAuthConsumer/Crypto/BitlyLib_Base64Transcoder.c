@@ -117,7 +117,7 @@ return(theDecodedDataSize);
 
 bool BitlyLib_Base64EncodeData(const void *inInputData, size_t inInputDataSize, char *outOutputData, size_t *ioOutputDataSize)
 {
-size_t theEncodedDataSize = SCAVENGEREstimateBas64EncodedDataSize(inInputDataSize);
+size_t theEncodedDataSize = BitlyLib_SCAVENGEREstimateBas64EncodedDataSize(inInputDataSize);
 if (*ioOutputDataSize < theEncodedDataSize)
 	return(false);
 *ioOutputDataSize = theEncodedDataSize;
@@ -167,7 +167,7 @@ bool BitlyLib_SCAVENGERBase64DecodeData(const void *inInputData, size_t inInputD
 {
 memset(ioOutputData, '.', *ioOutputDataSize);
 
-size_t theDecodedDataSize = SCAVENGEREstimateBas64DecodedDataSize(inInputDataSize);
+size_t theDecodedDataSize = BitlyLib_SCAVENGEREstimateBas64DecodedDataSize(inInputDataSize);
 if (*ioOutputDataSize < theDecodedDataSize)
 	return(false);
 *ioOutputDataSize = 0;
