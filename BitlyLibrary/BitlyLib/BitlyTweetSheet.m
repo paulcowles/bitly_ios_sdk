@@ -135,7 +135,7 @@
     
     navController.modalPresentationStyle = UIModalPresentationFormSheet;
     
-    [viewController presentModalViewController:navController animated:YES];
+    [viewController presentViewController:navController animated:YES completion:NULL];
     
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) { 
         navController.view.superview.bounds = CGRectMake (0.0, 
